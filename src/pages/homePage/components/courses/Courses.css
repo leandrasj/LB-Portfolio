@@ -1,0 +1,98 @@
+.courses {
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: auto;
+}
+
+.courses h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.course-card {
+    background: #1d1c1c;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.course-card h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--main-color, #00bcd4);
+}
+
+.course-card p {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #ddd;
+}
+
+.course-card small {
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+}
+
+/* Responsividade */
+@media (max-width: 800px){
+    .courses h2 {
+        font-size: 2.5rem;
+    }
+    .courses-container {
+        padding: 20px;
+        display: flex;
+        padding-left: 20px;
+        overflow-x: auto;
+    }
+    .course-card {
+        min-width: 320px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px){
+    .courses h2 {
+        font-size: 2rem;
+    }
+    .course-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    .course-card h3 {
+        font-size: 1.5rem;
+    }
+    .course-card p {
+        font-size: 0.9rem;
+    }
+}

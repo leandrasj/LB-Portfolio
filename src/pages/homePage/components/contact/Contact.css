@@ -1,0 +1,143 @@
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.send-infs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs-user-infs{
+    height: 400px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contacts-infs{
+    height: 400px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;    
+}
+
+/*Informações de contato*/
+.container-infs-icon-div{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.container-infs-icon-div img{
+    width: 3rem;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text-container p{
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+/**/
+.contact h2{
+    font-size: 4rem;
+}
+
+.contact form{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.contact input{
+    font-size: 1.2rem;
+    padding: 20px;
+    border: solid var(--main-color) 2px;
+    border-radius: 10px;
+    background-color: transparent;
+    background-color: rgb(20, 19, 19);
+}
+
+/*Assunto*/
+.contact textarea{
+    height: 200px;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 20px;
+    border: solid var(--main-color) 2px;
+    border-radius: 10px;
+    background-color: transparent;
+    background-color: rgb(20, 19, 19);
+}
+
+.contact button{
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: 20px;
+    border-radius: 60px;
+    background: linear-gradient(
+        270deg,
+        rgb(0, 0, 238),
+        var(--main-color)
+    );
+    transition: 0.3s ease-in-out;
+}
+
+.contact button:hover{
+    letter-spacing: 5px;
+}
+
+@media (max-width: 1000px){
+    .send-infs{
+        gap: 3rem;
+    }
+    .contact textarea{
+        width: 100%;
+    }
+    .send-infs{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .inputs-user-infs{
+        height: 450px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contact h2{
+        font-size: 3rem;
+    }
+    .contacts-infs{
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    .contact h2{
+        font-size: 2rem;
+    }
+    .contact button{
+        font-size: 1rem;
+        padding: 20px;
+    }
+}
